@@ -2187,7 +2187,7 @@ body {
     top: 0.00px;
 }
 
-.home .group22 .group21 .group20 .group19 .contactUsd43b769d {
+/* .btn-contact{
     position: absolute;
     box-sizing: content-box;
     -ms-transform: rotate(0.00deg);
@@ -2210,6 +2210,7 @@ body {
     text-align: left;
     letter-spacing: 1.87px;
     color: rgba(255, 255, 255, 1);
+    background-color: rgba(58, 163, 160, 1);
     -webkit-text-stroke: 1.00px rgba(0, 0, 0, 0);
     font-size: 24.00px;
     font-weight: 700;
@@ -2224,7 +2225,7 @@ body {
     height: 29.00px;
     left: 87.00px;
     top: 22.00px;
-}
+} */
 
 .home .group25 {
     display: block;
