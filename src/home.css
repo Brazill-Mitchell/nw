@@ -14,6 +14,10 @@ body {
     -ms-overflow-style: none;
 }
 
+.img{
+    width: 100%;
+}
+
 .home {
     display: block;
     position: absolute;
@@ -36,11 +40,37 @@ body {
     padding-left: 0.00px;
     overflow-x: auto;
     overflow-y: auto;
-    background-color: rgba(255, 255, 255, 1);
-    width: 1920.00px;
+    /* background-color: rgba(255, 255, 255, 1); */
+    width: 100vw;
     height: 6627.00px;
     left: 0px;
     top: 0px;
+}
+
+.bg-dream-homes{
+    position: relative;
+    z-index: -10;
+}
+
+.btn-contact{
+    background-color: rgba(58, 163, 160, 1);
+    border-bottom-color: rgba(112, 112, 112, 1);
+    border-bottom-style: none;
+    border-bottom-width: 1.00px;
+    border-left-color: rgba(112, 112, 112, 1);
+    border-left-style: none;
+    border-left-width: 1.00px;
+    border-right-color: rgba(112, 112, 112, 1);
+    border-right-style: none;
+    border-right-width: 1.00px;
+    border-top-color: rgba(112, 112, 112, 1);
+    border-top-style: none;
+    border-top-width: 1.00px;
+    border-top-left-radius: 4.00px;
+    border-top-right-radius: 4.00px;
+    border-bottom-left-radius: 4.00px;
+    border-bottom-right-radius: 4.00px;
+    width: fit-content
 }
 
 .home .rectangle1 {
@@ -62,7 +92,7 @@ body {
     padding-right: 0.00px;
     padding-bottom: 0.00px;
     padding-left: 0.00px;
-    background-color: rgba(255, 255, 255, 1);
+    /* background-color: rgba(255, 255, 255, 1); */
     border-bottom-color: rgba(112, 112, 112, 1);
     border-bottom-style: none;
     border-bottom-width: 1.00px;
@@ -289,32 +319,15 @@ body {
     top: 0.00px;
 }
 
-.home .group42 .group1 .aboutbdff10d8 {
+.nav-item{
     position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    background-color: rgba(255, 255, 255, 0);
-    text-align: left;
+    box-sizing: border-box;
+    text-align: center;
     letter-spacing: 0.22px;
-    color: rgba(141, 141, 141, 1);
+    color: rgba(0, 0, 0, 1);
     -webkit-text-stroke: 1.00px rgba(0, 0, 0, 0);
     font-size: 22.00px;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
     font-family: Montserrat, Arial;
     text-decoration: none;
@@ -322,89 +335,12 @@ body {
     overflow-x: unset;
     overflow-y: unset;
     white-space: pre;
-    width: 82.00px;
+    width: 73.00px;
     height: 27.00px;
-    left: 178.00px;
+    left: 0.00px;
     top: 0.00px;
 }
 
-.home .group42 .group1 .servicesbc8eec15 {
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    background-color: rgba(255, 255, 255, 0);
-    text-align: left;
-    letter-spacing: 0.22px;
-    color: rgba(141, 141, 141, 1);
-    -webkit-text-stroke: 1.00px rgba(0, 0, 0, 0);
-    font-size: 22.00px;
-    font-weight: 500;
-    font-style: normal;
-    font-family: Montserrat, Arial;
-    text-decoration: none;
-    box-shadow: none;
-    overflow-x: unset;
-    overflow-y: unset;
-    white-space: pre;
-    width: 112.00px;
-    height: 27.00px;
-    left: 364.00px;
-    top: 0.00px;
-}
-
-.home .group42 .group1 .projects1534629d {
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    background-color: rgba(255, 255, 255, 0);
-    text-align: left;
-    letter-spacing: 0.22px;
-    color: rgba(141, 141, 141, 1);
-    -webkit-text-stroke: 1.00px rgba(0, 0, 0, 0);
-    font-size: 22.00px;
-    font-weight: 500;
-    font-style: normal;
-    font-family: Montserrat, Arial;
-    text-decoration: none;
-    box-shadow: none;
-    overflow-x: unset;
-    overflow-y: unset;
-    white-space: pre;
-    width: 119.00px;
-    height: 27.00px;
-    left: 581.00px;
-    top: 0.00px;
-}
 
 .home .group42 .group1 .contact {
     position: absolute;
@@ -674,37 +610,9 @@ body {
     top: 9.00px;
 }
 
-.home .maskGroup1 {
-    display: block;
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    background-image: url("assets/maskGroup1.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    overflow-x: unset;
-    overflow-y: unset;
-    background-color: transparent;
-    width: 1920.00px;
-    height: 944.00px;
-    left: 0.00px;
-    top: 136.00px;
+.bg-image {
+    width: 100%;
+    height: 100%;
 }
 
 .home .maskGroup1 .greysonJoralemonA1g0oex29ecUnsplash {
@@ -797,25 +705,10 @@ body {
     top: 0.00px;
 }
 
-.home .rectangle4 {
+.home .dream-homes-rectangle {
     position: absolute;
     box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
     opacity: 0.20000000298023224;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
     background-color: rgba(0, 0, 0, 1);
     border-bottom-color: rgba(112, 112, 112, 1);
     border-bottom-style: none;
@@ -840,83 +733,17 @@ body {
     top: 136.00px;
 }
 
-.home .group7 {
-    display: block;
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    overflow-x: unset;
-    overflow-y: unset;
-    background-color: transparent;
-    width: 676.00px;
-    height: 378.00px;
-    left: 150.00px;
-    top: 346.00px;
+#dream-homes-content{
+    
 }
 
-.home .group7 .group5 {
-    display: block;
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    overflow-x: unset;
-    overflow-y: unset;
-    background-color: transparent;
-    width: 676.00px;
-    height: 255.00px;
-    left: 0.00px;
-    top: 0.00px;
+.home .dream-homes-content .group5 {
+
 }
 
-.home .group7 .group5 .weReBuildYour {
+.home .dream-homes-content .group5 .weReBuildYour {
     position: absolute;
     box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
     background-color: rgba(255, 255, 255, 0);
     text-align: left;
     letter-spacing: 0.19px;
@@ -927,35 +754,11 @@ body {
     font-style: normal;
     font-family: Montserrat, Arial;
     text-decoration: none;
-    box-shadow: none;
-    overflow-x: unset;
-    overflow-y: unset;
-    white-space: pre;
-    width: 218.00px;
-    height: 29.00px;
-    left: 6.00px;
-    top: 0.00px;
+
 }
 
-.home .group7 .group5 .dreamHomes {
-    position: absolute;
+.home .dream-homes-content .group5 .dreamHomes {
     box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
     background-color: rgba(255, 255, 255, 0);
     text-align: left;
     letter-spacing: 2.40px;
@@ -970,31 +773,9 @@ body {
     overflow-x: unset;
     overflow-y: unset;
     white-space: pre;
-    width: 676.00px;
-    height: 97.00px;
-    left: 0.00px;
-    top: 33.00px;
 }
 
-.home .group7 .group5 .loremIpsumDolorSitAmetConsecteturAdipiscingElitLoremIpsumDolorSitAmetConsecteturAdipiscingElitLoremIpsumDolorSitAmetConsecteturAdipiscingElit {
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
+.home .dream-homes-content .group5 .sample-text {
     background-color: rgba(255, 255, 255, 0);
     text-align: left;
     letter-spacing: 0.66px;
@@ -1005,63 +786,16 @@ body {
     font-style: normal;
     font-family: Montserrat, Arial;
     text-decoration: none;
-    box-shadow: none;
     overflow-x: unset;
     overflow-y: unset;
-    width: 522.00px;
-    height: 113.00px;
-    left: 6.00px;
-    top: 142.00px;
 }
 
-.home .group7 .group6 {
-    display: block;
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    overflow-x: unset;
-    overflow-y: unset;
-    background-color: transparent;
-    width: 352.00px;
-    height: 73.00px;
-    left: 9.00px;
-    top: 305.00px;
-}
+/* .home .dream-homes-content .group6 {
 
-.home .group7 .group6 .rectangle5e3cd30b0 {
-    position: absolute;
+} */
+
+.home .dream-homes-content .group6 .rectangle5e3cd30b0 {
     box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
     background-color: rgba(58, 163, 160, 1);
     border-bottom-color: rgba(112, 112, 112, 1);
     border-bottom-style: none;
@@ -1079,32 +813,10 @@ body {
     border-top-right-radius: 4.00px;
     border-bottom-left-radius: 4.00px;
     border-bottom-right-radius: 4.00px;
-    box-shadow: none;
-    width: 352.00px;
-    height: 73.00px;
-    left: 0.00px;
-    top: 0.00px;
 }
 
-.home .group7 .group6 .contactUs6725f55b {
-    position: absolute;
+.home .dream-homes-content .group6 .contactUs6725f55b {
     box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
     background-color: rgba(255, 255, 255, 0);
     text-align: left;
     letter-spacing: 1.87px;
@@ -1115,14 +827,6 @@ body {
     font-style: normal;
     font-family: Montserrat, Arial;
     text-decoration: none;
-    box-shadow: none;
-    overflow-x: unset;
-    overflow-y: unset;
-    white-space: pre;
-    width: 179.00px;
-    height: 29.00px;
-    left: 87.00px;
-    top: 22.00px;
 }
 
 .home .group15 {
@@ -1846,36 +1550,11 @@ body {
     top: 0.00px;
 }
 
-.home .group16 {
-    display: block;
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    overflow-x: unset;
-    overflow-y: unset;
-    background-color: transparent;
-    width: 1595.00px;
-    height: 688.00px;
-    left: 162.00px;
-    top: 1369.00px;
+.about-section {
+    
 }
 
-.home .group16 .outsiteCoRLk3sqlibwUnsplash {
+/* .home .group16 .outsiteCoRLk3sqlibwUnsplash {
     position: absolute;
     box-sizing: content-box;
     -ms-transform: rotate(0.00deg);
@@ -1920,27 +1599,9 @@ body {
     height: 688.00px;
     left: 0.00px;
     top: 0.00px;
-}
+} */
 
 .home .group16 .about {
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
     background-color: rgba(255, 255, 255, 0);
     text-align: left;
     letter-spacing: 2.10px;
@@ -1955,10 +1616,6 @@ body {
     overflow-x: unset;
     overflow-y: unset;
     white-space: pre;
-    width: 273.00px;
-    height: 86.00px;
-    left: 738.00px;
-    top: 0.00px;
 }
 
 .home .group16 .loremIpsumDolorSitAmetConsecteturAdipiscingElitSedDoEiusmodTemporIncididuntUtLaboreEtDoloreMagnaAliquaUtEnimAdMinimVeniamQuisNostrudExercitationUllamcoLaborisNisiUtAliquipExEaCommodoConsequatDuisAuteIrureDolorIn97d1f490 {
@@ -2001,82 +1658,14 @@ body {
 }
 
 .home .group22 {
-    display: block;
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    overflow-x: unset;
-    overflow-y: unset;
-    background-color: transparent;
-    width: 1673.00px;
-    height: 916.00px;
-    left: 124.00px;
-    top: 2597.00px;
+
 }
 
 .home .group22 .group17 {
-    display: block;
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    overflow-x: unset;
-    overflow-y: unset;
-    background-color: transparent;
-    width: 585.00px;
-    height: 86.00px;
-    left: 544.00px;
-    top: 0.00px;
+    
 }
 
-.home .group22 .group17 .our {
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
+.our-services{
     background-color: rgba(255, 255, 255, 0);
     text-align: left;
     letter-spacing: 2.10px;
@@ -2087,14 +1676,9 @@ body {
     font-style: normal;
     font-family: Montserrat, Arial;
     text-decoration: none;
-    box-shadow: none;
     overflow-x: unset;
     overflow-y: unset;
     white-space: pre;
-    width: 170.00px;
-    height: 86.00px;
-    left: 0.00px;
-    top: 0.00px;
 }
 
 .home .group22 .group17 .services {
@@ -2137,149 +1721,15 @@ body {
 }
 
 .home .group22 .group18 {
-    display: block;
-    position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
     overflow-x: unset;
     overflow-y: unset;
-    background-color: transparent;
-    width: 1552.09px;
-    height: 79.72px;
-    left: 60.00px;
-    top: 156.00px;
 }
 
-.home .group22 .group18 .path183381cc1b {
+.services-bar {
     position: absolute;
-    box-sizing: content-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    fill: rgba(230, 204, 30, 1);
-    box-shadow: none;
+    border: 1px solid rgba(214, 214, 214, 1);
     width: 409.50px;
     height: 79.72px;
-    left: 0.00px;
-    top: 0.00px;
-}
-
-.home .group22 .group18 .path18ee29d597 {
-    position: absolute;
-    box-sizing: border-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    fill: rgba(255, 255, 255, 1);
-    stroke: rgba(214, 214, 214, 1);
-    stroke-width: 1.00px;
-    stroke-linecap: butt;
-    box-shadow: none;
-    width: 409.50px;
-    height: 79.72px;
-    left: 381.75px;
-    top: 0.00px;
-}
-
-.home .group22 .group18 .path18725e6eb5 {
-    position: absolute;
-    box-sizing: border-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    fill: rgba(255, 255, 255, 1);
-    stroke: rgba(214, 214, 214, 1);
-    stroke-width: 1.00px;
-    stroke-linecap: butt;
-    box-shadow: none;
-    width: 409.50px;
-    height: 79.72px;
-    left: 761.73px;
-    top: 0.00px;
-}
-
-.home .group22 .group18 .path18 {
-    position: absolute;
-    box-sizing: border-box;
-    -ms-transform: rotate(0.00deg);
-    -webkit-transform: rotate(0.00deg);
-    transform: rotate(0.00deg);
-    -ms-transform-origin: center;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    opacity: 1;
-    cursor: default;
-    margin-top: 0.00px;
-    margin-right: 0.00px;
-    margin-bottom: 0.00px;
-    margin-left: 0.00px;
-    padding-top: 0.00px;
-    padding-right: 0.00px;
-    padding-bottom: 0.00px;
-    padding-left: 0.00px;
-    fill: rgba(255, 255, 255, 1);
-    stroke: rgba(214, 214, 214, 1);
-    stroke-width: 1.00px;
-    stroke-linecap: butt;
-    box-shadow: none;
-    width: 409.50px;
-    height: 79.72px;
-    left: 1142.59px;
-    top: 0.00px;
 }
 
 .home .group22 .group18 .drywall {
