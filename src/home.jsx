@@ -15,20 +15,33 @@ import servicePreviewImg from "./assets/charlesDeluvioZa9oagrjnlmUnsplash.png"
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      inputFirst: "",
+      inputPhone: "",
+      inputLast: "",
+      inputEmail: "",
+      inputRemarks: ""
+    };
+  }
+
+  setField(fieldName,e){
+    const state = this.state
+    this.setState({
+      ...state, [fieldName]: e
+    },console.log(this.state))
   }
 
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="row d-flex flex-row">
 
           {/* Logo */}
-          <div className='col-2'>
+          <div className='logo-head col-3'>
             <div className='container'>
               <div className='row d-flex flex-column'>
-                <div className="col">NW</div>
-                <div className="col">
+                <div id="nw-logo" className="">NW</div>
+                <div className="no-gutters living-construction">
                   LIVING
                   <br />
                   CONSTRUCTION
@@ -42,16 +55,16 @@ class Home extends React.Component {
             <div id="nav-bar" className="container">
               {" "}
               <div className="row d-flex flex-row"> 
-                <div className="col nav-item">HOME</div>
-                <div className="col nav-item">ABOUT</div>
-                <div className="col nav-item">SERVICES</div>
-                <div className="col nav-item">PROJECTS</div>
-                <div className="col nav-item">CONTACT</div>
+                <span className="nav-item">HOME</span>
+                <span className="nav-item">ABOUT</span>
+                <span className="nav-item">SERVICES</span>
+                <span className="nav-item">PROJECTS</span>
+                <span className="nav-item">CONTACT</span>
               </div>
             </div>
         </div>
         <div className="col-1">
-          <div className="x9876543210">9876543210</div>
+          {/* <div className="x9876543210">9876543210</div> */}
         </div>
         </div>
         
@@ -64,16 +77,16 @@ class Home extends React.Component {
             <div className="col">
               <div className='container'>
                 <div className='row d-flex flex-column justify-content-start'>
-                  <div className="" style={{width: "fit-content"}}>We Re-build your</div>
-                    <div className="" style={{width: "fit-content"}}>DREAM HOMES</div>
-                    <div className="" style={{width: "fit-content"}}>
+                  <div className="we-rebuild-your" style={{width: "fit-content"}}>We Re-build your</div>
+                    <div className="dream-homes" style={{width: "fit-content"}}>DREAM HOMES</div>
+                    <div className="dream-homes-text" style={{width: "fit-content"}}>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
                       ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
                       dolor sit amet, consectetur adipiscing elit.
                     </div>
                     {/* contact button */}
                     <div className="col-4">
-                      <button className="btn-contact">CONTACT US</button>
+                      <button className="btn-main">CONTACT US</button>
                     </div>
                 </div>
               </div>
@@ -87,43 +100,21 @@ class Home extends React.Component {
             </div>
           </div>
 
-         
-          
         </div>
       
-
-        {/* <div className="group23">
-          {" "}
-          <div className="rectangle6"></div>
-          <svg
-            preserveAspectRatio="none"
-            viewBox="0 0 422 231.736328125"
-            className="path2"
-          >
-            <path d="M 0 0 L 422 0 L 335.1560668945313 231.736328125 L 0 231.736328125 L 0 0 Z" />
-          </svg>
-          <svg
-            preserveAspectRatio="none"
-            viewBox="0 0 422 231.736328125"
-            className="path17"
-          >
-            <path d="M 0 0 L 422 0 L 335.1560668945313 231.736328125 L 0 231.736328125 L 0 0 Z" />
-          </svg>
-        </div> */}
-
         {/* About Area */}
         <div className="container-fluid">
           <div className='row'>
             {/* bg image */}
-            <div className="col-6 outsiteCoRLk3sqlibwUnsplash">
+            <div className="about-image">
               <img className="img" src={aboutImage} alt=""></img>
             </div>
             {/* text */}
-            <div className='col-6'>
-              <div className='container'>
+            <div className='about-summary'>
+              <div className='container-fluid'>
                 <div className='row d-flex flex-column'>
-                  <div className="col about">ABOUT</div>
-                  <div className="col loremIpsumDolorSitAmetConsecteturAdipiscingElitSedDoEiusmodTemporIncididuntUtLaboreEtDoloreMagnaAliquaUtEnimAdMinimVeniamQuisNostrudExercitationUllamcoLaborisNisiUtAliquipExEaCommodoConsequatDuisAuteIrureDolorIn97d1f490">
+                  <div className="col about-section">ABOUT</div>
+                  <div className="col about-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
                     ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -141,15 +132,15 @@ class Home extends React.Component {
 
         {/* Our Services */}
         <div className="container-fluid ">
-          <div className="row">
-            <div className="col">OUR</div>
-            <div className="col">SERVICES</div>
+          <div className="row our-services">
+            <div className="title-one mx-2">OUR</div>
+            <div className="title-two mx-2">SERVICES</div>
           </div>
           <div className="row">
-            <div className="col services-bar">DRYWALL</div>
-            <div className="col services-bar">TAPING</div>
-            <div className="col services-bar">SIMPLE FRAMING</div>
-            <div className="col services-bar">RENOVATION</div>
+            <div className="col services-options">DRYWALL</div>
+            <div className="col services-options">TAPING</div>
+            <div className="col services-options">SIMPLE FRAMING</div>
+            <div className="col services-options">RENOVATION</div>
           </div>
 
           {/* Services Summary */}
@@ -171,7 +162,7 @@ class Home extends React.Component {
                     nulla pariatur.
                   </div>
                   <div className="col">
-                    <button className="btn-contact">CONTACT US</button>
+                    <button className="btn-main">CONTACT US</button>
                   </div>
 
                 </div>
@@ -198,46 +189,43 @@ class Home extends React.Component {
           </div>
         </div>
 
-        {/* Contact Us */}
-        <div className="group24">
-          <div className="rectangle8"></div>
-          <div className="contactUs8e14d283">CONTACT US</div>
-        </div>
 
         {/* Featured Projects */}
-        <div className="container">
-          <div className='row'>
-            <div className="col">FEATURED</div>
-            <div className="col">PROJECTS</div>
-          </div>
+
+        <div className="row d-flex justify-content-center">
+          <span className="title-one">FEATURED</span>
+          <span className="title-two">PROJECTS</span>
+        </div>
+        
+        <div className="container-fluid mb-5">
           {/* samples */}
-          <div className="row">
-            <div className='col-4'>
-              <img className='img' src={project1} alt=''></img>
+          <div className="row d-flex justify-content-around">
             
-              {/* project1 */}
-              <div className="projectTitle1809ccb7">PROJECT TITLE</div>
-              <div className="loremIpsumDolorSitAmetConsecteturAdipiscingElitSedDoEiusmodTemporIncididuntUtLaboreEtDoloreMagnaAliqua35108073">
+            {/* project1 */}
+            <div className='shadow project-card mx-2'>
+              <img className='img' src={project1} alt=''></img>
+              <div className="project-title text-left mx-3">PROJECT TITLE</div>
+              <div className="project-description text-left mx-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </div>
             </div>
 
               {/* project2 */}
-            <div className='col-4'>
+            <div className='shadow project-card mx-2'>
               <img className='img' src={project2} alt=''></img>
-              <div className="projectTitle1809ccb7">PROJECT TITLE</div>
-              <div className="loremIpsumDolorSitAmetConsecteturAdipiscingElitSedDoEiusmodTemporIncididuntUtLaboreEtDoloreMagnaAliqua35108073">
+              <div className="project-title text-left mx-3">PROJECT TITLE</div>
+              <div className="project-description text-left mx-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </div>
             </div>
             
               {/* project3 */}
-            <div className='col-4'>
+            <div className='shadow project-card mx-2'>
               <img className='img' src={project3} alt=''></img>
-              <div className="projectTitle1809ccb7">PROJECT TITLE</div>
-              <div className="loremIpsumDolorSitAmetConsecteturAdipiscingElitSedDoEiusmodTemporIncididuntUtLaboreEtDoloreMagnaAliqua35108073">
+              <div className="project-title text-left mx-3">PROJECT TITLE</div>
+              <div className="project-description text-left mx-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </div>
@@ -247,38 +235,50 @@ class Home extends React.Component {
 
         
 
-        {/* Contact Us */}
-        <div className="container">
-          <div className="row">
-            <div className='col'>CONTACT US</div>
+        <div id="contact-form" className='container mb-5'>
+          {/* Contact Us */}
+          <div className="row d-flex justify-content-center">
+            <span className="title-two">CONTACT US</span>
           </div>
-        </div>
-        
-        {/* contact form */}
-        <div className="container">
 
-          {/* bg image */}
-          <div className="row">
+          <div className='row'>
             <div className='col'>
-              <img className='img' src={project2} alt=''></img>
-            </div>
-          </div>
+              {/* contact form */}
+              <div className="container-fluid d-flex justify-content-center">
 
-          {/* form */}
-          <div className="row">
-            <div className="col-6">FIRST NAME</div>
-            <div className="col-6">PHONE NUMBER</div>
-            <div className="col-6">LAST NAME</div>
-            <div className="col-6">EMAIL ADDRESS</div>
-          </div>
+                {/* form */}
+                <div className='row position-absolute d-flex justify-content-center mt-5'>
+                  <div className='col-10'>
+                    <div className='container-fluid'>
+                      <div className="row justify-content-around">
+                        <input className="input-contact col-md-4 col-xs-7 w-50 h-25 mx-2 my-1" placeholder="FIRST NAME" value={this.state.inputFirst} onChange={(event)=>{this.setField('inputFirst',event.target.value)}}></input>
+                        <input className="input-contact col-md-4 col-xs-7 w-50 h-25 mx-2 my-1" placeholder="PHONE NUMBER" value={this.state.inputPhone} onChange={(event)=>{this.setField('inputPhone',event.target.value)}}></input>
+                        <input className="input-contact col-md-4 col-xs-7 w-50 h-25 mx-2 my-1" placeholder="LAST NAME" value={this.state.inputLast} onChange={(event)=>{this.setField('inputLast',event.target.value)}}></input>
+                        <input className="input-contact col-md-4 col-xs-7 w-50 h-25 mx-2 my-1" placeholder="EMAIL ADDRESS" value={this.state.inputEmail} onChange={(event)=>{this.setField('inputEmail',event.target.value)}}></input>
+                        <input id="input-remarks" className="input-contact col-10 h-25 mx-2 my-1" placeholder="YOUR REMARKS HERE" value={this.state.inputRemarks} onChange={(event)=>{this.setField('inputRemarks',event.target.value)}}></input>
+                      </div>
 
-          {/* submit */}
-          <div className="row">
-            <div className="col submit">
-              <button class='btn-main'>SUBMIT</button>
+                      {/* submit */}
+                      <div className="row">
+                        <div className="col submit">
+                          <button className='btn-main'>SUBMIT</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* bg image */}
+                <div className="img-contact ">
+                  {/* <div className="dark-overlay"></div> */}
+                  <img className="img" src={project2} alt=""></img>
+                </div>
+                
+              </div>
             </div>
           </div>
         </div>
+
 
             {/* Maps */}
         <div className="group41">
@@ -289,7 +289,7 @@ class Home extends React.Component {
 
         {/* Footer */}
         <div className="container">
-          <div className="row position-absolute w-100" style={{opacity:".4"}}>
+          <div className="row position-absolute" style={{opacity:".4"}}>
             <div className="col bg-primary">Background square</div>
           </div>
           <div className="row">
@@ -323,7 +323,7 @@ class Home extends React.Component {
           </div>
           <div className="group39">
             {" "}
-            <div className="nw">NW</div>
+            <div id="nw-logo" className="nw">NW</div>
             <div className="livingconstruction">
               LIVING
               <br />
