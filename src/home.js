@@ -38,45 +38,13 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid w-100">
-        <div className="row d-flex flex-row justify-content-start">
-
-          {/* Logo */}
-          <div className='logo-head col-2'>
-            <div className='container'>
-              <div className='row d-flex flex-column'>
-                <div id="nw-logo" className="">NW</div>
-                <div className="living-construction">
-                  LIVING
-                  <br />
-                  CONSTRUCTION
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Nav */}
-          <div id="nav-bar" className='col-8'>
-            <div className="container-fluid">
-              {" "}
-              <div className="row d-flex flex-row"> 
-                <span className="col 2 nav-item">HOME</span>
-                <span className="col 2 nav-item">ABOUT</span>
-                <span className="col 2 nav-item">SERVICES</span>
-                <span className="col 2 nav-item">PROJECTS</span>
-                <span className="col 2 nav-item">CONTACT</span>
-              </div>
-            </div>
-        </div>
-        <div className="col-1">
-          {/* <div className="x9876543210">9876543210</div> */}
-        </div>
-        </div>
+      <div className="h-100 w-100">
+        
         
         
 
          {/* Dream Home */}
-        <div className="container-fluid dream-homes-area">
+        <div id="dream-homes-area">
 
             {/* Content */}
           <div id="dream-homes-content" className="row w-75 mt-3 dream-homes-content position-absolute">
@@ -99,25 +67,24 @@ class Home extends React.Component {
           
           {/* bg image */}
           <div className="bg-dream-homes">
-            <div className="bg-image">
               <img className="img" src={sawImg} alt=""></img>
-            </div>
           </div>
 
         </div>
       
         {/* About Area */}
-        <div className="container-fluid">
-          <div className='row'>
-            {/* bg image */}
-            <div className="about-image">
-              <img className="img" src={aboutImage} alt=""></img>
+        <div className="container-fluid mt-5">
+          <div className='row justify-content-start'>
+            {/* image */}
+            <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 mr-3 ">
+              <img className="img rounded" src={aboutImage} alt=""></img>
             </div>
             {/* text */}
-            <div className='about-summary'>
+            {/* TODO: image width breakpoint for md & lower */}
+            <div className='col-xs-12 col-sm-12 col-md-5 col-lg-6'>
               <div className='container-fluid'>
                 <div className='row d-flex flex-column'>
-                  <div className="col about-section">ABOUT</div>
+                  <div className="col about-title">ABOUT</div>
                   <div className="col about-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -134,12 +101,30 @@ class Home extends React.Component {
           </div>
         </div>
 
+        {/* TODO: Change to Vector Graphic */}
+        <div className="decoration-bar mt-5">
+          <div className="consultation-text position-absolute w-75 mx-auto">
+            <span className="font-color-primary font-weight-bolder">GET YOUR FREE CONSULTATION NOW !</span><br/>
+            <span className="font-color-primary">We will help you re-build everything as per your requirements. We are a company that offers design and build services for you from initial sketches to the final construction.</span>
+          </div>
+          <div className="decoration-rect-full h-100">
+            <div className="decoration-rect-left"></div>
+          </div>
+
+          {/* contact button */}
+          <div>
+            <button className="btn-secondary">CONTACT</button>
+          </div>
+        </div>
+
         {/* Our Services */}
         <div className="container-fluid ">
           <div className="row our-services">
             <div className="title-one mx-2">OUR</div>
             <div className="title-two mx-2">SERVICES</div>
           </div>
+
+          {/* TODO: text should be centered vertically (use breakpoints) */}
           <div className="row">
             <div className="col services-options">DRYWALL</div>
             <div className="col services-options">TAPING</div>
@@ -149,11 +134,11 @@ class Home extends React.Component {
 
           {/* Services Summary */}
           {/* TODO: Display selected service*/}
-        <div className="container service-preview-container">
+        <div id="service-preview-container" className="container-fluid elevation rounded">
 
           {/* service summary */}
-          <div className="row">
-            <div className="col-6">
+          <div className="row mt-4">
+            <div className="col-7 mt-3">
               <div className="container ">
                 <div className='row d-flex flex-column'>
                   <div className='col service-preview-title'>DRYWALL SERVICES</div>
@@ -165,34 +150,18 @@ class Home extends React.Component {
                     in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur.
                   </div>
-                  <div className="col">
+                  <div className="col mb-3">
                     <button className="btn-main">CONTACT US</button>
                   </div>
-
                 </div>
               </div>
-
             </div>
-            <div className='col-6'>
-              <img className='img' src={servicePreviewImg} alt=''></img>
+            <div className='service-preview-image'>
+              <img className='img rounded-right' src={servicePreviewImg} alt=''></img>
             </div>
           </div>
         </div>
       </div>
-
-
-        <div className="group25">
-          {" "}
-          <div className="getYourFreeConsultationNow">
-            GET YOUR FREE CONSULTATION NOW !
-          </div>
-          <div className="weWillHelpYouReBuildEverythingAsPerYourRequirementsWeAreACompanyThatOffersDesignAndBuildServicesForYouFromInitialSketchesToTheFinalConstruction">
-            We will help you re-build everything as per your requirements. We
-            are a company that offers design and build services for you from
-            initial sketches to the final construction.
-          </div>
-        </div>
-
 
         {/* Featured Projects */}
 
@@ -203,11 +172,11 @@ class Home extends React.Component {
         
         <div className="container-fluid mb-5">
           {/* samples */}
-          <div className="row d-flex justify-content-around">
+          <div className="row d-flex justify-content-around mx-4">
             
             {/* project1 */}
-            <div className='shadow project-card mx-2'>
-              <img className='img' src={project1} alt=''></img>
+            <div className='project-card mx-2 elevation-low rounded'>
+              <img className='img rounded-top' src={project1} alt=''></img>
               <div className="project-title text-left mx-3">PROJECT TITLE</div>
               <div className="project-description text-left mx-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -216,8 +185,8 @@ class Home extends React.Component {
             </div>
 
               {/* project2 */}
-            <div className='shadow project-card mx-2'>
-              <img className='img' src={project2} alt=''></img>
+            <div className='project-card mx-2 elevation-low rounded'>
+              <img className='img rounded-top' src={project2} alt=''></img>
               <div className="project-title text-left mx-3">PROJECT TITLE</div>
               <div className="project-description text-left mx-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -226,8 +195,8 @@ class Home extends React.Component {
             </div>
             
               {/* project3 */}
-            <div className='shadow project-card mx-2'>
-              <img className='img' src={project3} alt=''></img>
+            <div className='project-card mx-2 elevation-low rounded'>
+              <img className='img rounded-top' src={project3} alt=''></img>
               <div className="project-title text-left mx-3">PROJECT TITLE</div>
               <div className="project-description text-left mx-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

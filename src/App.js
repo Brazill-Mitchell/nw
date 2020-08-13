@@ -3,6 +3,13 @@ import NW from './home.js'
 import { connect } from "react-redux"
 import { setScreenSize } from "./redux/actions"
 import { mediaBreakPoints } from "./constants"
+import About from "./PageSections/About"
+import Contact from "./PageSections/Contact"
+import Footer from "./PageSections/Footer"
+import Nav from "./PageSections/Nav"
+import Projects from "./PageSections/Projects"
+import Services from "./PageSections/Services"
+
 
 import './App.css';
 
@@ -37,6 +44,14 @@ function App(props) {
 
   return (
     <div className="App">
+      
+      
+      <Nav/>
+      <About/>
+      <Contact/>
+      <Projects/>
+      <Services/>
+      <Footer/>
       <NW testProp="testProp"></NW>
     </div>
   );
