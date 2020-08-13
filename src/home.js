@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./home.css";
 import sawImg from "./assets/maskGroup1.png";
 import aboutImage from "./assets/outsiteCoRLk3sqlibwUnsplash.png";
@@ -10,38 +9,44 @@ import facebookImg from "./assets/facebook1.png"
 import instagramImg from "./assets/instagram.png"
 import twitterImg from "./assets/twitter.png"
 import servicePreviewImg from "./assets/charlesDeluvioZa9oagrjnlmUnsplash.png"
-
+import { testAction } from "./redux/actions"
+import { connect } from "react-redux"
+ 
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      inputFirst: "",
-      inputPhone: "",
-      inputLast: "",
-      inputEmail: "",
-      inputRemarks: ""
-    };
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+        inputFirst: "",
+        inputPhone: "",
+        inputLast: "",
+        inputEmail: "",
+        inputRemarks: ""
+        };
+    }
 
-  setField(fieldName,e){
-    const state = this.state
-    this.setState({
-      ...state, [fieldName]: e
-    },console.log(this.state))
-  }
+    setField(fieldName,e){
+        const state = this.state
+        this.setState({
+        ...state, [fieldName]: e
+        },console.log(this.state))
+    }
+  
+    componentDidMount(){
+
+    }
 
   render() {
     return (
-      <div className="container-fluid">
-        <div className="row d-flex flex-row">
+      <div className="container-fluid w-100">
+        <div className="row d-flex flex-row justify-content-start">
 
           {/* Logo */}
-          <div className='logo-head col-3'>
+          <div className='logo-head col-2'>
             <div className='container'>
               <div className='row d-flex flex-column'>
                 <div id="nw-logo" className="">NW</div>
-                <div className="no-gutters living-construction">
+                <div className="living-construction">
                   LIVING
                   <br />
                   CONSTRUCTION
@@ -51,15 +56,15 @@ class Home extends React.Component {
           </div>
 
           {/* Nav */}
-          <div className='col-8'>
-            <div id="nav-bar" className="container">
+          <div id="nav-bar" className='col-8'>
+            <div className="container-fluid">
               {" "}
               <div className="row d-flex flex-row"> 
-                <span className="nav-item">HOME</span>
-                <span className="nav-item">ABOUT</span>
-                <span className="nav-item">SERVICES</span>
-                <span className="nav-item">PROJECTS</span>
-                <span className="nav-item">CONTACT</span>
+                <span className="col 2 nav-item">HOME</span>
+                <span className="col 2 nav-item">ABOUT</span>
+                <span className="col 2 nav-item">SERVICES</span>
+                <span className="col 2 nav-item">PROJECTS</span>
+                <span className="col 2 nav-item">CONTACT</span>
               </div>
             </div>
         </div>
@@ -72,30 +77,29 @@ class Home extends React.Component {
 
          {/* Dream Home */}
         <div className="container-fluid dream-homes-area">
-          <div id="dream-homes-content" className="row dream-homes-content position-absolute">
-            {/* <div className="dream-homes-rectangle"></div> */}
-            <div className="col">
+
+            {/* Content */}
+          <div id="dream-homes-content" className="row w-75 mt-3 dream-homes-content position-absolute">
+            <div className="col mt-5 ml-5">
               <div className='container'>
-                <div className='row d-flex flex-column justify-content-start'>
+                <div className='row d-flex flex-column justify-content-start ml-3 mt-2'>
                   <div className="we-rebuild-your" style={{width: "fit-content"}}>We Re-build your</div>
                     <div className="dream-homes" style={{width: "fit-content"}}>DREAM HOMES</div>
-                    <div className="dream-homes-text" style={{width: "fit-content"}}>
+                    <div className="dream-homes-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
                       ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
                       dolor sit amet, consectetur adipiscing elit.
                     </div>
                     {/* contact button */}
-                    <div className="col-4">
-                      <button className="btn-main">CONTACT US</button>
-                    </div>
+                    <button className="btn-main mt-2">CONTACT US</button>
                 </div>
               </div>
             </div>
-
           </div>
+          
           {/* bg image */}
-          <div className="bg-dream-homes row">
-            <div className="col">
+          <div className="bg-dream-homes">
+            <div className="bg-image">
               <img className="img" src={sawImg} alt=""></img>
             </div>
           </div>
@@ -234,42 +238,53 @@ class Home extends React.Component {
         </div>
 
         
+        {/* Contact Us */}
+        <div id="contact-section" className='mb-5'>
 
-        <div id="contact-form" className='container mb-5'>
-          {/* Contact Us */}
-          <div className="row d-flex justify-content-center">
+          {/* Title */}
+          <div className="d-flex justify-content-center">
             <span className="title-two">CONTACT US</span>
           </div>
 
           <div className='row'>
             <div className='col'>
               {/* contact form */}
-              <div className="container-fluid d-flex justify-content-center">
+              <div id="contact-content" className="h-100 w-100 d-flex justify-content-center">
 
                 {/* form */}
-                <div className='row position-absolute d-flex justify-content-center mt-5'>
-                  <div className='col-10'>
-                    <div className='container-fluid'>
-                      <div className="row justify-content-around">
-                        <input className="input-contact col-md-4 col-xs-7 w-50 h-25 mx-2 my-1" placeholder="FIRST NAME" value={this.state.inputFirst} onChange={(event)=>{this.setField('inputFirst',event.target.value)}}></input>
-                        <input className="input-contact col-md-4 col-xs-7 w-50 h-25 mx-2 my-1" placeholder="PHONE NUMBER" value={this.state.inputPhone} onChange={(event)=>{this.setField('inputPhone',event.target.value)}}></input>
-                        <input className="input-contact col-md-4 col-xs-7 w-50 h-25 mx-2 my-1" placeholder="LAST NAME" value={this.state.inputLast} onChange={(event)=>{this.setField('inputLast',event.target.value)}}></input>
-                        <input className="input-contact col-md-4 col-xs-7 w-50 h-25 mx-2 my-1" placeholder="EMAIL ADDRESS" value={this.state.inputEmail} onChange={(event)=>{this.setField('inputEmail',event.target.value)}}></input>
-                        <input id="input-remarks" className="input-contact col-10 h-25 mx-2 my-1" placeholder="YOUR REMARKS HERE" value={this.state.inputRemarks} onChange={(event)=>{this.setField('inputRemarks',event.target.value)}}></input>
+                <div id="contact-form" className='h-100 w-100 position-absolute d-flex justify-content-center mt-5'>
+                  {/* <div className='col-10'> */}
+                    <div className='h-100 w-100'>
+                      <div className="contact-form-items h-100 w-100 ">
+                        <div className="input-contact mx-2 my-1">
+                          <input placeholder="FIRST NAME" value={this.state.inputFirst} onChange={(event)=>{this.setField('inputFirst',event.target.value)}}></input>
+                        </div>
+                        <div className="input-contact mx-2 my-1">
+                          <input placeholder="PHONE NUMBER" value={this.state.inputPhone} onChange={(event)=>{this.setField('inputPhone',event.target.value)}}></input>
+                        </div>
+                        <div className="input-contact mx-2 my-1">
+                          <input placeholder="LAST NAME" value={this.state.inputLast} onChange={(event)=>{this.setField('inputLast',event.target.value)}}></input>
+                        </div>
+                        <div className="input-contact mx-2 my-1">
+                          <input placeholder="EMAIL ADDRESS" value={this.state.inputEmail} onChange={(event)=>{this.setField('inputEmail',event.target.value)}}></input>
+                        </div>
+                        <div id="input-remarks" className="input-contact mx-2 my-1">
+                          <input placeholder="YOUR REMARKS HERE" value={this.state.inputRemarks} onChange={(event)=>{this.setField('inputRemarks',event.target.value)}}></input>
+                        </div>
                       </div>
 
                       {/* submit */}
-                      <div className="row">
-                        <div className="col submit">
+                      <div className="">
+                        <div className=" submit">
                           <button className='btn-main'>SUBMIT</button>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  {/* </div> */}
                 </div>
 
                 {/* bg image */}
-                <div className="img-contact ">
+                <div className="bg-image">
                   {/* <div className="dark-overlay"></div> */}
                   <img className="img" src={project2} alt=""></img>
                 </div>
@@ -337,8 +352,10 @@ class Home extends React.Component {
   }
 }
 
-Home.propTypes = {};
+const mapStateToProps = state => ({
+    screenSize: state.screenSize
+})
 
-Home.defaultProps = {};
+const mapDispatchToProps = { testAction }
 
-export default Home;
+export default connect(mapStateToProps,mapDispatchToProps)(Home);
