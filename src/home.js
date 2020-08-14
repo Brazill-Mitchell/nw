@@ -4,13 +4,14 @@ import sawImg from "./assets/maskGroup1.png";
 // import { action } from "./redux/actions"
 import { connect } from "react-redux"
 import { screenSizes } from "./constants";
+import Fade from "react-reveal/Fade"
  
 
 class Home extends React.Component {
 
   render() {
     return (
-      <div className="h-100 w-100">
+      <Fade className="h-100 w-100">
 
          {/* Dream Home */}
         <div id="dream-homes-area">
@@ -71,7 +72,7 @@ class Home extends React.Component {
           <div className="rectangle12"></div>
         </div>
 
-      </div>
+      </Fade>
     );
   }
 }

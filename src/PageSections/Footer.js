@@ -1,61 +1,72 @@
 import React from "react"
 import { connect } from "react-redux"
-// import { action } from "../redux/actions"
 import facebookImg from "../assets/facebook1.png"
 import instagramImg from "../assets/instagram.png"
 import twitterImg from "../assets/twitter.png"
+import Fade from "react-reveal/Fade"
 
 class Footer extends React.Component{
 
 
     render(){
         return (
-            <div>
-                {/* Footer */}
-                <div className="container">
-                    <div className="row position-absolute" style={{opacity:".4"}}>
-                        <div className="col bg-primary">Background square</div>
-                    </div>
-                    <div className="row">
-                        <div className="loremIpsumDolorSitAmetConsecteturAdipisicin">
-                            Lorem ipsum dolor sit amet, consectetur adipisicin
+            <Fade>
+                <div id="footer-container" className="container-fluid">
+
+                    {/* General */}
+                    <div id="footer-general" className="text-left">
+                        {/* Logo */}
+                        <div className='mb-2'>
+                            <div className='container-fluid'>
+                                <div className='row d-flex flex-column'>
+                                <div className="nw-logo-footer">NW</div>
+                                <div className="logo-text-footer" style={{color:"white"}}>
+                                    LIVING
+                                    <br />
+                                    CONSTRUCTION
+                                </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="address">Address :</div>
-                    </div>
-                    <div className="followForLatestUpdates">
-                        FOLLOW FOR LATEST UPDATES :
-                    </div>
-                    <div className="row">
-                        {" "}
-                        <div className="col-1 social-icon">
-                        <img className='img' src={facebookImg} alt=''></img>
-                        </div>
-                        <div className="col-1 social-icon">
-                        <img className='img' src={instagramImg} alt=''></img>
-                        </div>
-                        <div className="col-1 social-icon">
-                        <img className='img' src={twitterImg} alt=''></img>
+
+                        {/* Address */}
+                        <div className='footer-address'>
+                            Address: <br/>
+                            123 Drive Way, United States
                         </div>
                     </div>
-                    <div className="emailContact">Email : contact@xstudio.com</div>
-                    <div className="phone2468465">Phone : 2468465</div>
-                    <div className="group40Eaf1625de6e3"></div>
-                    <div className="allRightsReserved2020">
-                        All Rights Reserved
-                        <br />
-                        2020
+
+                    {/* Social */}
+                    <div id='footer-socials'>
+                        <div className="">
+                            FOLLOW FOR LATEST UPDATES :
+                        </div>
+                        <div className="social-container d-flex flex-row">
+                            <div className="social-icon">
+                                <img className='img' src={facebookImg} alt=''></img>
+                            </div>
+                            <div className="social-icon">
+                                <img className='img' src={instagramImg} alt=''></img>
+                            </div>
+                            <div className="social-icon">
+                                <img className='img' src={twitterImg} alt=''></img>
+                            </div>
+                        </div>
                     </div>
-                    <div className="group39">
-                        {" "}
-                        <div id="nw-logo" className="nw">NW</div>
-                        <div className="livingconstruction">
-                        LIVING
-                        <br />
-                        CONSTRUCTION
+
+                    {/* Footer Contact */}
+                    <div id='footer-contact ' className="d-flex flex-column justify-content-center text-right">
+                        <div className="emailContact">Email : contact@xstudio.com</div>
+                        <div className="phone2468465">Phone : 2468465</div>
+                        <div className="group40Eaf1625de6e3"></div>
+                        <div className="allRightsReserved2020">
+                            All Rights Reserved
+                            <br />
+                            2020
                         </div>
                     </div>
                 </div>
-            </div>
+            </Fade>
         )
     }
 }

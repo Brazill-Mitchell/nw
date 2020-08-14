@@ -9,7 +9,7 @@ import Footer from "./PageSections/Footer"
 import Nav from "./PageSections/Nav"
 import Projects from "./PageSections/Projects"
 import Services from "./PageSections/Services"
-
+import Map from "./PageSections/Map"
 
 import './App.css';
 
@@ -41,6 +41,10 @@ function App(props) {
       window.addEventListener('resize', handleResize)
     },[])
 
+    useEffect(()=>{
+      handleResize()
+    },[])
+
 
   return (
     <div className="App">
@@ -52,7 +56,8 @@ function App(props) {
       <Contact/>
       <Projects/>
       <Services/>
-      {/* <Footer/> */}
+      <Map/>
+      <Footer/>
       
     </div>
   );

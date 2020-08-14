@@ -1,7 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { action } from "../redux/actions"
-import project2 from "../assets/danielMcculloughHtblqdxfg9kUnsplash9f2c92ca.png";
+import Fade from "react-reveal/Fade"
 
 
 
@@ -10,7 +9,7 @@ class Contact extends React.Component{
         super(props);
         this.state = {
             contactContentClass: "contact-content",
-            inputClass: "input-contact mb-3 ",
+            inputClass: "input-contact mb-3 mx-auto ",
             inputFirst: "",
             inputPhone: "",
             inputLast: "",
@@ -28,49 +27,53 @@ class Contact extends React.Component{
 
     render(){
         return (
-            <div>
+            <Fade>
                 {/* Contact Us */}
-                <div id="contact-section" className='mb-5'>
+                <div id="contact-section" className='mb-5 mx-a'>
 
                     {/* Title */}
                     <div className="d-flex justify-content-center">
                         <span className="title-two">CONTACT US</span>
                     </div>
 
-                    <div className='row'>
-                        <div className='col bg-success justify-content-center'>
+                    <div className=''>
+                        <div className='col justify-content-center'>
                             {/* contact form */}
                             <div className={this.state.contactContentClass}>
-
-                                {/* form */}
-                                <div id="contact-form" className='position-absolute d-flex flex-column justify-content-center mt-5'>
-                                    <div className="contact-form-items">
-                                        <div className='container'>
-                                            <div className='row d-flex flex-row justify-content-center'>
+                                <div className="contact-form-items ">
+                                    <div className='container-fluid '>
+                                        <div className='row d-flex flex-row justify-content-center'>
+                                            <div className='input-contact-container'>
                                                 <div className={this.state.inputClass}>
                                                     <input className="input-box" placeholder="FIRST NAME" value={this.state.inputFirst} onChange={(event)=>{this.setField('inputFirst',event.target.value)}}></input>
                                                 </div>
+                                            </div>
+                                            <div className='input-contact-container'>
                                                 <div className={this.state.inputClass}>
                                                     <input className="input-box" placeholder="PHONE NUMBER" value={this.state.inputPhone} onChange={(event)=>{this.setField('inputPhone',event.target.value)}}></input>
                                                 </div>
+                                            </div>
+                                            <div className='input-contact-container'>
                                                 <div className={this.state.inputClass}>
                                                     <input className="input-box" placeholder="LAST NAME" value={this.state.inputLast} onChange={(event)=>{this.setField('inputLast',event.target.value)}}></input>
                                                 </div>
+                                            </div>
+                                            <div className='input-contact-container'>
                                                 <div className={this.state.inputClass}>
                                                     <input className="input-box" placeholder="EMAIL ADDRESS" value={this.state.inputEmail} onChange={(event)=>{this.setField('inputEmail',event.target.value)}}></input>
                                                 </div>
-                                                <div id="input-remarks" className="col-12 mx-3 input-contact">
-                                                    <input className="input-box" placeholder="YOUR REMARKS HERE" value={this.state.inputRemarks} onChange={(event)=>{this.setField('inputRemarks',event.target.value)}}></input>
-                                                </div>
+                                            </div>
+                                            <div id="input-remarks" className="">
+                                                <input className="input-box" placeholder="YOUR REMARKS HERE" value={this.state.inputRemarks} onChange={(event)=>{this.setField('inputRemarks',event.target.value)}}></input>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    {/* submit */}
-                                    <div className="">
-                                        <div className=" submit">
-                                            <button className='btn-main'>SUBMIT</button>
-                                        </div>
+                                {/* submit */}
+                                <div className="">
+                                    <div className="mt-2">
+                                        <button className='btn-main'>SUBMIT</button>
                                     </div>
                                 </div>
                             
@@ -78,7 +81,7 @@ class Contact extends React.Component{
                         </div>
                     </div>
                 </div>
-            </div>
+            </Fade>
         )
     }
 }

@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import { action } from "../redux/actions"
 import { screenSizes } from "../constants"
 import aboutImage from "../assets/outsiteCoRLk3sqlibwUnsplash.png";
-
+import Fade from "react-reveal/Fade"
 
 
 class About extends React.Component{
@@ -33,17 +33,17 @@ class About extends React.Component{
 
     render(){
         return (
-                <div className="ml-2 mr-2 mt-5">
-                    <div className='row justify-content-start'>
+                <Fade className="ml-2 mr-2 mt-5">
+                    <div className="row justify-content-start">
                         {/* image */}
                         <div className={this.state.aboutImageClass}>
                         <img className="img rounded" src={aboutImage} alt=""></img>
                         </div>
                         {/* text */}
                         {/* TODO: image width breakpoint for md & lower */}
-                        <div className='col-xs-12 col-sm-12 col-md-7 col-lg-6'>
-                        <div className='container-fluid'>
-                            <div className='row d-flex flex-column'>
+                        <div className="col-xs-12 col-sm-12 col-md-7 col-lg-6">
+                        <div className="container-fluid">
+                            <div className="row d-flex flex-column">
                             <div className="col about-title">ABOUT</div>
                             <div className="col about-text">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -59,7 +59,7 @@ class About extends React.Component{
                         </div>
                         </div>
                     </div>
-                </div>
+                </Fade>
         )
     }
 }

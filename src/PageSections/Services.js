@@ -2,6 +2,8 @@ import React from "react"
 import { connect } from "react-redux"
 // import { action } from "../redux/actions"
 import { services } from "./samples"
+import { screenSizes } from "../constants"
+import Fade from "react-reveal/Fade"
 
 class Services extends React.Component{
     constructor(props){
@@ -18,9 +20,29 @@ class Services extends React.Component{
         })
     }
 
+    // Handles Responsiveness
+    componentDidUpdate(prevprops){
+        if(prevprops.screenSize !== this.props.screenSize){
+            const screen = this.props.screenSize
+            if (screen === screenSizes.MOBILE){
+                this.setState({
+                    navClass: ""
+                })
+            }else if (screen === screenSizes.TABLET){
+                this.setState({
+                    navClass: ""
+                })
+            }else{
+                this.setState({
+                    navClass: ""
+                })
+            }
+        }
+    }
+
     render(){
         return (
-            <div>
+            <Fade>
                 {/* Our Services */}
                 <div className="container ">
                     <div className="row our-services">
@@ -29,7 +51,7 @@ class Services extends React.Component{
                     </div>
 
                     {/* TODO: text should be centered vertically (use breakpoints) */}
-                    <div className="row">
+                    <div className="row mb-2">
                         <div 
                             className={this.state.serviceDisplayed === services.drywall
                                 ? "col service-option-selected"
@@ -61,37 +83,36 @@ class Services extends React.Component{
                     </div>
 
                     {/* Services Summary */}
-                    {/* TODO: Display selected service*/}
-                    <div id="service-preview-container" className="elevation rounded">
+                    <div id="service-preview-container" className="elevation rounded d-flex">
 
-                        {/* service summary */}
-                        <div className="service-preview mt-4 d-flex flex-row">
+                        <div id="service-preview" className="d-flex flex-row">
                             <div className="service-summary mt-3">
                                 <div className="container justify-content-start">
                                     <div className='row d-flex flex-column'>
-                                    <div className='col service-preview-title'>{this.state.serviceDisplayed.title}</div>
-                                    <div className="col service-preview-summary">
+                                    <div className='col service-preview-title title-secondary'>{this.state.serviceDisplayed.title}</div>
+                                    <p className="service-preview-text">
                                         {this.state.serviceDisplayed.description}
-                                    </div>
+                                    </p>
                                     <div className="col mb-3">
                                         <button className="btn-text">CONTACT US</button>
                                     </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className='service-preview-image'>
-                                <img className='img rounded-right' src={this.state.serviceDisplayed.image} alt=''></img>
-                            </div>
+                            <div 
+                                className='service-preview-image'
+                                style={{backgroundImage: `url(${this.state.serviceDisplayed.image})`}}    
+                            ></div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Fade>
         )
     }
 }
 
 const mapStateToProps = state => ({
-    property: state.property
+    screenSize: state.screenSize
 })
 
 // const mapDispatchToProps = { action }
