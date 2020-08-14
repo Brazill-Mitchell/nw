@@ -9,11 +9,11 @@ class Nav extends React.Component{
 
     render(){
         return (
-            <div>
+            <div className="sticky-top bg-white">
                 <div className="row d-flex flex-row justify-content-start mt-3 ml-1 mb-3">
 
                     {/* Logo */}
-                    <div className='logo-head'>
+                    <div className='logo-head mb-2'>
                         <div className='container-fluid'>
                             <div className='row d-flex flex-column'>
                             <div id="nw-logo" className="">NW</div>
@@ -28,7 +28,7 @@ class Nav extends React.Component{
 
                     {/* TODO: Justify start for larger screen, center for small screen */}
                     {/* Nav */}
-                    <div id="nav-bar" className=' ml-5 mt-3'>
+                    <div id="nav-bar" className=' ml-5 mt-4'>
                         <div className="container-fluid d-flex">
                             <div className="row w-100 d-flex flex-row justify-content-start"> 
                             <span className="nav-item">HOME</span>
