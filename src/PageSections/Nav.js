@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import phoneImg from "../assets/phone.png"
 import { screenSizes } from "../constants"
+import Fade from "react-reveal/Fade"
 
 
 class Nav extends React.Component{
@@ -30,7 +31,7 @@ class Nav extends React.Component{
 
     render(){
         return (
-            <div className="sticky-top bg-white">
+            <Fade className="sticky-top bg-white">
                 <div className="row d-flex flex-row justify-content-start mt-3 mx-2 mb-3"
                     style={this.props.screenSize !== screenSizes.MOBILE
                         ? {flexWrap: "nowrap"}
@@ -98,7 +99,7 @@ class Nav extends React.Component{
                     </div>
                 </div>
 
-            </div>
+            </Fade>
         )
     }
 }

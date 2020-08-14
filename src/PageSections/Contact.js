@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import Fade from "react-reveal/Fade"
+import Slide from "react-reveal/Slide"
 
 
 
@@ -27,7 +27,7 @@ class Contact extends React.Component{
 
     render(){
         return (
-            <Fade>
+            <Slide right>
                 {/* Contact Us */}
                 <div id="contact-section" className='mb-5 mx-a'>
 
@@ -81,7 +81,7 @@ class Contact extends React.Component{
                         </div>
                     </div>
                 </div>
-            </Fade>
+            </Slide>
         )
     }
 }

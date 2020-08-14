@@ -1,6 +1,6 @@
 import React from "react"
 import mapImg from "../assets/screenshotWwwgooglecom20200725000755.png"
-import Fade from "react-reveal/Fade"
+import Slide from "react-reveal/Slide"
 
 function Map(){
 
@@ -14,11 +14,11 @@ function Map(){
     }
 
     return(
-        <Fade>
+        <Slide left>
             <a href={mapUrl}>
                 <img src={mapImg} alt="" className="mt-5" style={mapStyle}></img>
             </a>
-        </Fade>
+        </Slide>
         
     )
 }

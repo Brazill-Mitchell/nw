@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 // import { action } from "../redux/actions"
 import { services } from "./samples"
 import { screenSizes } from "../constants"
-import Fade from "react-reveal/Fade"
+import Slide from "react-reveal/Slide"
 
 class Services extends React.Component{
     constructor(props){
@@ -42,7 +42,7 @@ class Services extends React.Component{
 
     render(){
         return (
-            <Fade>
+            <Slide right>
                 {/* Our Services */}
                 <div className="container ">
                     <div className="row our-services">
@@ -106,7 +106,7 @@ class Services extends React.Component{
                         </div>
                     </div>
                 </div>
-            </Fade>
+            </Slide>
         )
     }
 }

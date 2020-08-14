@@ -3,14 +3,14 @@ import { connect } from "react-redux"
 import facebookImg from "../assets/facebook1.png"
 import instagramImg from "../assets/instagram.png"
 import twitterImg from "../assets/twitter.png"
-import Fade from "react-reveal/Fade"
+import Slide from "react-reveal/Slide"
 
 class Footer extends React.Component{
 
 
     render(){
         return (
-            <Fade>
+            <Slide left>
                 <div id="footer-container" className="container-fluid">
 
                     {/* General */}
@@ -66,7 +66,7 @@ class Footer extends React.Component{
                         </div>
                     </div>
                 </div>
-            </Fade>
+            </Slide>
         )
     }
 }

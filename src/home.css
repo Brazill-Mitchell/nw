@@ -95,6 +95,7 @@ body {
     font-weight: 700;
     font-family: Montserrat, Arial;
     line-height: 100%;
+    cursor: pointer;
 }
 
 .logo-head{
@@ -230,7 +231,8 @@ body {
     -o-transition: .2s box-shadow ease-in-out;
 }
 .elevation-low:hover{
-    /* box-shadow: 0 6px 10px 1px  rgba(0,0,0,.2); */
+    box-shadow: 0 6px 10px 1px  rgba(0,0,0,.2);
+    cursor: pointer;
 }
 #dream-homes-area{
     width: 100%;
@@ -376,21 +378,18 @@ body {
     flex: 1;
     /* margin: 0 2.5%; */
     font-family: Montserrat, Arial;
-    pointer-events: none;
 }
 .project-card-md{
     height: fit-content;
     width: 40%;
     /* margin: 0 2.5%; */
     font-family: Montserrat, Arial;
-    pointer-events: none;
 }
 .project-card-sm{
     height: fit-content;
     width: 100%;
     /* margin: 0 2.5%; */
     font-family: Montserrat, Arial;
-    pointer-events: none;
 }
 .project-title{
     position: relative;

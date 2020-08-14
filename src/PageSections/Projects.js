@@ -5,7 +5,7 @@ import project1 from "../assets/jasonBriscoeUv81e0oxxwqUnsplash.png";
 import project2 from "../assets/danielMcculloughHtblqdxfg9kUnsplash9f2c92ca.png";
 import project3 from "../assets/annieGrayWewtgkpuvt0Unsplash.png";
 import { screenSizes } from "../constants"
-import Fade from "react-reveal/Fade"
+import Slide from "react-reveal/Slide"
 
 
 class Projects extends React.Component{
@@ -37,7 +37,7 @@ class Projects extends React.Component{
 
     render(){
         return (
-            <Fade>
+            <Slide right>
                 {/* Featured Projects */}
 
                 <div className="row d-flex justify-content-center">
@@ -80,7 +80,7 @@ class Projects extends React.Component{
                         </div>
                     </div>
                 </div>
-            </Fade>
+            </Slide>
         )
     }
 }
