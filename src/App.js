@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import NW from './home.js'
+import Home from './Home.js'
 import { connect } from "react-redux"
 import { setScreenSize } from "./redux/actions"
 import { mediaBreakPoints } from "./constants"
@@ -47,12 +47,13 @@ function App(props) {
       
       
       <Nav/>
+      <Home/>
       <About/>
       <Contact/>
       <Projects/>
       <Services/>
-      <Footer/>
-      <NW testProp="testProp"></NW>
+      {/* <Footer/> */}
+      
     </div>
   );
 }
