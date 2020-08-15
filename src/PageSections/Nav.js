@@ -31,71 +31,73 @@ class Nav extends React.Component{
 
     render(){
         return (
-            <Fade className="sticky-top bg-white">
-                <div className="row d-flex flex-row justify-content-start mt-3 mx-2 mb-3"
-                    style={this.props.screenSize !== screenSizes.MOBILE
-                        ? {flexWrap: "nowrap"}
-                        : {}
-                    }
-                >
-
-                    {/* Logo */}
-                    <div 
-                        className="logo-head mb-2"
-                        style={this.props.screenSize === screenSizes.MOBILE
-                            ? {width: "100%", display: "flex", justifyContent:"space-between"}
+            <Fade>
+                <div className="sticky-top bg-white">
+                    <div className="row d-flex flex-row justify-content-start mt-3 mx-2 mb-3"
+                        style={this.props.screenSize !== screenSizes.MOBILE
+                            ? {flexWrap: "nowrap"}
                             : {}
                         }
                     >
-                        <div className="container-fluid">
-                            <div className="row d-flex flex-column">
-                            <div className="nw-logo">NW</div>
-                            <div className="living-construction">
-                                LIVING
-                                <br />
-                                CONSTRUCTION
-                            </div>
-                            </div>
-                        </div>
 
-                        {/* display phone icon for mobile */}
-                        {this.props.screenSize === screenSizes.MOBILE
-                            ? <div className="phone mt-3 mr-2">
-                                <div className="btn-phone">
-                                    <img src={phoneImg} className="my-1 phone-image" alt=""></img>
-                                </div>
-                             </div>
-                            : []
+                        {/* Logo */}
+                        <div 
+                            className="logo-head mb-2"
+                            style={this.props.screenSize === screenSizes.MOBILE
+                                ? {width: "100%", display: "flex", justifyContent:"space-between"}
+                                : {}
                             }
-                    </div>
-
-                    {/* TODO: Justify start for larger screen, center for small screen */}
-                    {/* Nav */}
-                    <div id="nav-bar" className={this.props.screenSize === screenSizes.MOBILE
-                            ? "mt-4"
-                            : "ml-5 mt-4"
-                        }>
-                        <div className="container-fluid d-flex">
-                            <div className="row w-100 d-flex flex-row justify-content-center"> 
-                            <span className="nav-item">HOME</span>
-                            <span className="nav-item">ABOUT</span>
-                            <span className="nav-item">SERVICES</span>
-                            <span className="nav-item">PROJECTS</span>
-                            <span className="nav-item">CONTACT</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        {this.props.screenSize === screenSizes.MOBILE
-                            ? []
-                            : <div className="phone mt-3">
-                                <div className="btn-phone">
-                                    <img src={phoneImg} className="phone-image" alt=""></img>
-                                    9876543210
+                        >
+                            <div className="container-fluid">
+                                <div className="row d-flex flex-column">
+                                <div className="nw-logo">NW</div>
+                                <div className="living-construction">
+                                    LIVING
+                                    <br />
+                                    CONSTRUCTION
+                                </div>
                                 </div>
                             </div>
-                        }
+
+                            {/* display phone icon for mobile */}
+                            {this.props.screenSize === screenSizes.MOBILE
+                                ? <div className="phone mt-3 mr-2">
+                                    <div className="btn-phone">
+                                        <img src={phoneImg} className="my-1 phone-image" alt=""></img>
+                                    </div>
+                                </div>
+                                : []
+                                }
+                        </div>
+
+                        {/* TODO: Justify start for larger screen, center for small screen */}
+                        {/* Nav */}
+                        <div id="nav-bar" className={this.props.screenSize === screenSizes.MOBILE
+                                ? "mt-4"
+                                : "ml-5 mt-4"
+                            }>
+                            <div className="container-fluid d-flex">
+                                <div className="row w-100 d-flex flex-row justify-content-center"> 
+                                <span className="nav-item">HOME</span>
+                                <span className="nav-item">ABOUT</span>
+                                <span className="nav-item">SERVICES</span>
+                                <span className="nav-item">PROJECTS</span>
+                                <span className="nav-item">CONTACT</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            {this.props.screenSize === screenSizes.MOBILE
+                                ? []
+                                : <div className="phone mt-3">
+                                    <div className="btn-phone">
+                                        <img src={phoneImg} className="phone-image" alt=""></img>
+                                        9876543210
+                                    </div>
+                                </div>
+                            }
+                        </div>
                     </div>
                 </div>
 
