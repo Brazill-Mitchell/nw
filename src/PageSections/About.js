@@ -35,7 +35,7 @@ class About extends React.Component{
     render(){
         return (
                 <Slide right>
-                    <div className="row justify-content-start ml-2 mr-2 mt-5">
+                    <div className="row justify-content-start ml-2 mr-2 mt-5" ref={this.props.navRef}>
                         {/* image */}
                         <div className={this.state.aboutImageClass}>
                             <img className="img rounded" src={aboutImage} alt=""></img>

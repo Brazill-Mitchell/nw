@@ -50,8 +50,7 @@ class Services extends React.Component{
                         <div className="title-two mx-2">SERVICES</div>
                     </div>
 
-                    {/* TODO: text should be centered vertically (use breakpoints) */}
-                    <div className="row mb-2">
+                    <div className="services-bar row no-gutters mb-2">
                         <div 
                             className={this.state.serviceDisplayed === services.drywall
                                 ? "col service-option-selected"
@@ -71,7 +70,7 @@ class Services extends React.Component{
                                 ? "col service-option-selected"
                                 : "col services-options"
                             } 
-                            onClick={()=>{this.changeService(services.framing)}}>SIMPLE FRAMING
+                            onClick={()=>{this.changeService(services.framing)}}>FRAMING
                         </div>
                         <div 
                             className={this.state.serviceDisplayed === services.renovation
@@ -85,8 +84,18 @@ class Services extends React.Component{
                     {/* Services Summary */}
                     <div id="service-preview-container" className="elevation rounded d-flex">
 
-                        <div id="service-preview" className="d-flex flex-row">
-                            <div className="service-summary mt-3">
+                        <div 
+                            id="service-preview" 
+                            className="d-flex flex-row"
+                            style={this.props.screenSize !== screenSizes.MOBILE 
+                                ? {height: "50vh"}
+                                : {}
+                            }
+                        >
+                            <div className="service-summary mt-3" style={this.props.screenSize !== screenSizes.MOBILE 
+                                ? {flex:"0 40%"}
+                                : {flex: "0 100%"}
+                            }>
                                 <div className="container justify-content-start">
                                     <div className='row d-flex flex-column'>
                                     <div className='col service-preview-title title-secondary'>{this.state.serviceDisplayed.title}</div>
@@ -99,10 +108,14 @@ class Services extends React.Component{
                                     </div>
                                 </div>
                             </div>
-                            <div 
-                                className='service-preview-image'
-                                style={{backgroundImage: `url(${this.state.serviceDisplayed.image})`}}    
-                            ></div>
+                            {/* image */}
+                            {this.props.screenSize !== screenSizes.MOBILE 
+                                ? <div 
+                                    className='service-preview-image'
+                                    style={{backgroundImage: `url(${this.state.serviceDisplayed.image})`}}    
+                                ></div>
+                                : []
+                            }
                         </div>
                     </div>
                 </div>

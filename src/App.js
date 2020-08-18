@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Home from './Home.js'
 import { connect } from "react-redux"
 import { setScreenSize } from "./redux/actions"
@@ -16,6 +16,21 @@ import './App.css';
 
 
 function App(props) {
+  const refHome = useRef(null)
+  const refAbout = useRef(null)
+  const refContact = useRef(null)
+  const refProjects = useRef(null)
+  const refServices = useRef(null)
+  
+  const refList = {
+    home: refHome ,
+    about: refAbout ,
+    contact: refContact ,
+    projects: refProjects ,
+    services: refServices 
+  }
+ 
+  
 
 
     // Responsive
@@ -50,12 +65,12 @@ function App(props) {
     <div className="App">
       
       
-      <Nav/>
-      <Home/>
-      <About/>
-      <Contact/>
-      <Projects/>
-      <Services/>
+      <Nav refList={refList}/>
+      <Home ref={refList.home}/>
+      <About testProp="Test Prop" ref={refList.about}/>
+      <Contact ref={refList.contact}/>
+      <Projects ref={refList.projects}/>
+      <Services ref={refList.services}/>
       <Map/>
       <Footer/>
       

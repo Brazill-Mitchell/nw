@@ -1,7 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import Slide from "react-reveal/Slide"
-
+import { screenSizes } from "../constants"
 
 
 class Contact extends React.Component{
@@ -42,7 +42,13 @@ class Contact extends React.Component{
                             <div className={this.state.contactContentClass}>
                                 <div className="contact-form-items ">
                                     <div className='container-fluid '>
-                                        <div className='row d-flex flex-row justify-content-center'>
+                                        <div 
+                                            className='row d-flex justify-content-center'
+                                            style={this.props.screenSize !== screenSizes.MOBILE 
+                                                ? {flexDirection: "row"}
+                                                : {flexDirection: "column"}
+                                            }
+                                        >
                                             <div className='input-contact-container'>
                                                 <div className={this.state.inputClass}>
                                                     <input className="input-box" placeholder="FIRST NAME" value={this.state.inputFirst} onChange={(event)=>{this.setField('inputFirst',event.target.value)}}></input>
@@ -87,7 +93,7 @@ class Contact extends React.Component{
 }
 
 const mapStateToProps = state => ({
-    property: state.property
+    screenSize: state.screenSize
 })
 
 // const mapDispatchToProps = { action }

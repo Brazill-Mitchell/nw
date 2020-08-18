@@ -13,6 +13,10 @@ class Nav extends React.Component{
         }
     }
 
+    jumpTo(sectionRef){
+        sectionRef.current.scrollIntoView()
+    }
+
     componentDidUpdate(prevprops){
         if(prevprops.screenSize !== this.props.screenSize){
             const screen = this.props.screenSize
@@ -78,11 +82,11 @@ class Nav extends React.Component{
                             }>
                             <div className="container-fluid d-flex">
                                 <div className="row w-100 d-flex flex-row justify-content-center"> 
-                                <span className="nav-item">HOME</span>
-                                <span className="nav-item">ABOUT</span>
-                                <span className="nav-item">SERVICES</span>
-                                <span className="nav-item">PROJECTS</span>
-                                <span className="nav-item">CONTACT</span>
+                                <span className="nav-item" onClick={()=>{this.jumpTo(this.props.refList.home)}}>HOME</span>
+                                <span className="nav-item" onClick={()=>{this.jumpTo(this.props.refList.about)}}>ABOUT</span>
+                                <span className="nav-item" onClick={()=>{this.jumpTo(this.props.refList.services)}}>SERVICES</span>
+                                <span className="nav-item" onClick={()=>{this.jumpTo(this.props.refList.projects)}}>PROJECTS</span>
+                                <span className="nav-item" onClick={()=>{this.jumpTo(this.props.refList.contact)}}>CONTACT</span>
                                 </div>
                             </div>
                         </div>
