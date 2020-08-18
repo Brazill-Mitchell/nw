@@ -34,8 +34,9 @@ class About extends React.Component{
 
     render(){
         return (
-                <Slide right>
-                    <div className="row justify-content-start ml-2 mr-2 mt-5" ref={this.props.navRef}>
+                <div ref={this.props.refAbout}>
+                    <Slide right>
+                    <div className="row justify-content-start ml-2 mr-2 mt-5">
                         {/* image */}
                         <div className={this.state.aboutImageClass}>
                             <img className="img rounded" src={aboutImage} alt=""></img>
@@ -62,6 +63,7 @@ class About extends React.Component{
                     </div>
                 {/* <img src={consultationSVG} alt=""></img>  */}
                 </Slide>
+                </div>
         )
     }
 }

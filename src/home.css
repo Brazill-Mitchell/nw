@@ -495,8 +495,17 @@ body {
     white-space: pre;
 }
 
+.services-bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 100%;
+}
+
 .services-options{
-    flex: 0 50%;
+    padding: 0 5px;
+    position: relative;
+    /* flex: 1 0 50%; */
     height: 5vh;
     text-align: center;
     vertical-align: middle;
@@ -542,6 +551,9 @@ body {
     cursor: pointer;
 }
 .service-option-selected{
+    padding: 0 5px;
+    position: relative;
+    /* flex: 0 50%; */
     height: 5vh;
     text-align: center;
     vertical-align: middle;
@@ -630,6 +642,12 @@ body {
     #service-preview-container{
         /* width: 100vw; */
     }
+    .services-options{
+        font-size: 12px;
+    }
+    .service-option-selected{
+        font-size: 12px;
+    }
 }
 
 @media only screen and (min-width: 800px) {
@@ -644,7 +662,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 425px) {
     #service-preview{
         display: flex;
     }
@@ -671,9 +689,23 @@ body {
     .input-contact-container{
         margin-bottom: 1%;
     }
+    .services-options{
+        flex: 1 0 50%;
+        min-width: 50%;
+    }
+    .service-option-selected{
+        flex: 1 0 50%;
+        min-width: 50%;
+    }
+    .services-options{
+        font-size: 12px;
+    }
+    .service-option-selected{
+        font-size: 12px;
+    }
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 425px) {
     #service-preview{
         display: flex;
         flex-direction: row;
@@ -693,6 +725,14 @@ body {
     }
     .input-contact-container{
         margin-bottom: 3%;
+    }
+    .services-options{
+        flex: 1 0 25%;
+        min-width: 25%;
+    }
+    .service-option-selected{
+        flex: 1 0 25%;
+        min-width: 25%;
     }
 }
 

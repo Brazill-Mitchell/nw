@@ -10,28 +10,27 @@ import Nav from "./PageSections/Nav"
 import Projects from "./PageSections/Projects"
 import Services from "./PageSections/Services"
 import Map from "./PageSections/Map"
-
 import './App.css';
 
 
 
 function App(props) {
+
+  const refNav = useRef(null)
   const refHome = useRef(null)
   const refAbout = useRef(null)
   const refContact = useRef(null)
   const refProjects = useRef(null)
-  const refServices = useRef(null)
-  
-  const refList = {
-    home: refHome ,
-    about: refAbout ,
-    contact: refContact ,
-    projects: refProjects ,
-    services: refServices 
-  }
- 
-  
+  const refServices = React.createRef()
 
+  const refList = {
+    refNav: refNav,
+    refHome: refHome ,
+    refAbout: refAbout ,
+    refContact: refContact ,
+    refProjects: refProjects ,
+    refServices: refServices 
+  }
 
     // Responsive
     function getScreenSize(){
@@ -60,17 +59,15 @@ function App(props) {
       handleResize()
     },[])
 
-
   return (
     <div className="App">
       
-      
       <Nav refList={refList}/>
-      <Home ref={refList.home}/>
-      <About testProp="Test Prop" ref={refList.about}/>
-      <Contact ref={refList.contact}/>
-      <Projects ref={refList.projects}/>
-      <Services ref={refList.services}/>
+      <Home refHome={refList.refHome}/>
+      <About refAbout={refList.refAbout}/>
+      <Contact refContact={refList.refContact}/>
+      <Projects refProjects={refList.refProjects}/>
+      <Services refServices={refServices}/>
       <Map/>
       <Footer/>
       
@@ -78,6 +75,10 @@ function App(props) {
   );
 }
 
+const mapStateToProps = state => ({
+  refList: state.refList
+})
+
 const mapDispatchToProps = { setScreenSize }
 
-export default connect(null,mapDispatchToProps)(App);
+export default connect(mapStateToProps,mapDispatchToProps)(App);
