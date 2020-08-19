@@ -55,7 +55,7 @@ class Contact extends React.Component {
                       >
                         <div className="input-contact-container">
                           <div className={this.state.inputClass}>
-                            <input
+                            <input  type="text"
                               className="input-box"
                               placeholder="FIRST NAME"
                               value={this.state.inputFirst}
@@ -67,7 +67,7 @@ class Contact extends React.Component {
                         </div>
                         <div className="input-contact-container">
                           <div className={this.state.inputClass}>
-                            <input
+                            <input  type="text"
                               className="input-box"
                               placeholder="PHONE NUMBER"
                               value={this.state.inputPhone}
@@ -79,7 +79,7 @@ class Contact extends React.Component {
                         </div>
                         <div className="input-contact-container">
                           <div className={this.state.inputClass}>
-                            <input
+                            <input  type="text"
                               className="input-box"
                               placeholder="LAST NAME"
                               value={this.state.inputLast}
@@ -91,7 +91,7 @@ class Contact extends React.Component {
                         </div>
                         <div className="input-contact-container">
                           <div className={this.state.inputClass}>
-                            <input
+                            <input  type="text"
                               className="input-box"
                               placeholder="EMAIL ADDRESS"
                               value={this.state.inputEmail}
@@ -101,8 +101,8 @@ class Contact extends React.Component {
                             ></input>
                           </div>
                         </div>
-                        <div id="input-remarks" className="">
-                          <input
+                        <div id="input-remarks" className="mx-2">
+                          <input type="text"
                             className="input-box"
                             placeholder="YOUR REMARKS HERE"
                             value={this.state.inputRemarks}
