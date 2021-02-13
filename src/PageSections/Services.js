@@ -104,7 +104,7 @@ class Services extends React.Component {
 
             {/* Services Summary */}
             <div
-              id="service-preview-container"
+              id="service-preview-container "
               className="elevation rounded d-flex"
             >
               <div

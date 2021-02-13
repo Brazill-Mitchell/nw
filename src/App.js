@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Home from './Home.js'
+import Home from './home.js'
 import { connect } from "react-redux"
 import { setScreenSize } from "./redux/actions"
 import { mediaBreakPoints } from "./constants"
